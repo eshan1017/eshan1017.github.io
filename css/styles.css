@@ -160,7 +160,7 @@ border-top-color: #ffb500;
 .alerted {position:absolute; top:-35px;  border-left:5px solid #e1523D; color:#e1523D; padding:5px 10px; font-size:24px;  }
 .form-group label { box-shadow:none; border-radius:0; font-size:20px; color:#fff; font-weight:100; padding:10px 0;}
 .form-group label h1 {font-size:48px; font-weight:100;}
-.form-group input, .form-group textarea  { border:none;  background:rgba(255,255,255, .2);height:auto; padding:15px 15px; box-shadow:none; border-radius:0; font-size:36px; color:#fff; outline: 0; width:100% }
+.form-group input, .form-group textarea, .form-group select  { border:none;  background:rgba(255,255,255, .2);height:auto; padding:15px 15px; box-shadow:none; border-radius:0; font-size:36px; color:#fff; outline: 0; width:100% }
 
 .form-group textarea {font-size:18px; padding:10px; min-height:300px;}
 
@@ -355,7 +355,7 @@ border-bottom:1px solid white;
 }
 
 
- .form-group label h1 {font-size:24px;} .form-group label {font-size:14px;} .form-group input, .form-group textarea {font-size:18px;padding: 15px 15px;} .questionaire {padding:20px 0;} .count {font-size:20px;} .cover .btn-lg {padding:10px 20px; font-size:20px;}
+ .form-group label h1 {font-size:24px;} .form-group label {font-size:14px;} .form-group input, .form-group select, .form-group textarea {font-size:18px;padding: 15px 15px;} .questionaire {padding:20px 0;} .count {font-size:20px;} .cover .btn-lg {padding:10px 20px; font-size:20px;}
 	.form-group textarea {min-height:150px;}
 	
 }
