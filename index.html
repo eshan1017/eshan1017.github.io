@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>武昌新世代出生履歷闖關網站</title>
+	<link rel='stylesheet prefetch' href='https://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+	<link rel='stylesheet prefetch' href='css/animate.min.css'>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,100,400,300,600,700,800'>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class="covering">
+  <div class="progress">
+    <div class="progress-bar" style="width: 0;"> <span class="sr-only">60% Complete</span> </div>
+  </div>
+  <header class="htmleaf-header">
+	<h1 class="h1-header animated bounceInLeft">武昌新世代教會<br>出生履歷</h1>
+	
+</header>
+  <div class="container-fluid table-class">
+    <div class="black " >
+      <div class="inner cover">
+        <div class="centerUp">
+          <div class="questionaire">
+            <form>
+              <ul class="progress-form">
+                <li class="form-group animated fadeInRightBig  activate" data-color="#E1523D" data-percentage="20%">
+                  <label for="nameInput">
+                  <h1>歡迎您來到出生履歷</h1>
+                  請填入您的大名
+                  </label>
+                  <input type="text" class="form-control getName" id="q1" placeholder="ex鄭賢智"  required="required"/>
+                </li>
+                <li class="form-group animated hide inactive" data-color="#7C6992"  data-percentage="40%">
+                  <label for="exampleInputEmail1">
+                  <h1>嗨~<span class="cName"></span>!</h1>
+                  請選擇您今天想闖關的主題！
+                  </label>
+                  <select type="select" class="form-control" id="q2"  required="required">
+                  <option value='0'>--請選擇--</option>
+                  <option value='1'>呼召</option>
+                  <option value='2'>尋找</option>
+                  <option value='3'>等待</option>
+                  <option value='4'>開工</option>
+                  <option value='5'>開堂</option>
+                  <option value='6'>團隊</option>
+                  <option value='7'>校園</option>
+                  <option value='8'>家庭</option>
+                  <option value='9'>青年</option>
+                  <option value='10'>兒童</option>
+                  <option value='11'>小組</option>
+                  </select>
+                </li>
+                <li class="form-group animated hide" data-color="#00AF66"  data-percentage="60%">
+                  <label for="exampleInputEmail1">
+                  <h1><span class="theme"></span></h1>
+                  <span class="question"></span>
+                  </label>
+                  <select type="select" class="form-control" id="q3"  required="required">
+                  </select>
+                  </li>
+                <li class="form-group animated hide" data-color="#00AF66"  data-percentage="80%">
+                  <label for="exampleInputEmail1">
+                  <h1><span class="answer"></span></h1>
+                  <span class="answer2"></span>
+                  </label>
+                </li>
+              </ul>
+            </form>
+          </div>
+          <div class="count"><span class="img_cnt"></span> / <span class="img_amt"></span></div>
+          <button class="btn btn-default btn-lg nxt animated" >Next <span class="icon-next"></span></button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <form >
+      <input hidden="" class="answer1" style="color:#444"/>
+      <input hidden="" class="answer2" style="color:#444"/>
+      <input hidden="" class="answer3" style="color:#444"/>
+      <input hidden="" class="answer4" style="color:#444"/>
+      <input hidden="" class="answer5" style="color:#444"/>
+      <input type="submit" class="btn btn-default btn-lg hide submit" value="結束"/>
+    </form>
+  </div>
+</div>
+</div>
+<div class="animated thanks hide">
+  <h1 style="font-weight:100; font-size:48px; width: 80%; margin: 0 auto;">非常感謝您的參與，<br>最後請幫我們填寫一份調查問卷!</h1>
+  <form action="http://www.htmleaf.com/">
+    <button class="btn btn-lg btn-success" style="margin:20px;" onclick="location.href='要前往的網頁連結'">問卷連結</button>
+  </form>
+</div>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src='https://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+	<script>
+	$(function () {
+	    $('input.getName').keyup('keyup', function () {
+	        $('.cName').html($('.getName').val());
+	    });
+	    
+	    $('#q2').on('change',function () {
+	       
+	       if(this.value=='1')
+	       {
+	       $('.theme').html('呼召');
+	       $('.question').html('武昌新世代教會是武昌教會的第幾個分堂？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='0'>第9個</option>");
+	       $('#q3').append("<option value='1'>第10個</option>");
+	       $('#q3').append("<option value='0'>第11個</option>");
+	       $('#q3').append("<option value='0'>第12個</option>");
+	       }
+	       else if(this.value=='2')
+	       {
+	       $('.theme').html('尋找');
+	       $('.question').html('本來在凹子底捷運站附近有一個很棒的地點，最後牧者卻沒有把他們租下來，請問是為什麼呢？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='0'>母堂不同意</option>");
+	       $('#q3').append("<option value='0'>交通不方便</option>");
+	       $('#q3').append("<option value='1'>屬靈長輩認為這個地點不適合</option>");
+	       $('#q3').append("<option value='0'>金額太高</option>");
+	       }
+	       else if(this.value=='3')
+	       {
+	       $('.theme').html('等待');
+	       $('.question').html('本來已經談妥了地點的價錢一個月八萬的租金，但是距離最後真正簽約的時間還等待了多久呢？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='0'>四個月</option>");
+	       $('#q3').append("<option value='0'>五個月</option>");
+	       $('#q3').append("<option value='1'>六個月</option>");
+	       $('#q3').append("<option value='0'>七個月</option>");
+	       }
+	       else if(this.value=='4')
+	       {
+	       $('.theme').html('開工');
+	       $('.question').html('教會自2016年四月正式簽約後，到了幾月才正式施工呢？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='1'>六月</option>");
+	       $('#q3').append("<option value='0'>七月</option>");
+	       $('#q3').append("<option value='0'>八月</option>");
+	       $('#q3').append("<option value='0'>九月</option>");
+	       }
+	       else if(this.value=='5')
+	       {
+	       $('.theme').html('開堂');
+	       $('.question').html('為什麼在開堂的第二週開始，就有了週六的主日呢？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='1'>讓週日服事夢夢國的同工也能守主日</option>");
+	       $('#q3').append("<option value='0'>為了讓弟兄姊妹有更多的選擇</option>");
+	       $('#q3').append("<option value='0'>因為一堂主日人太多場地不夠大</option>");
+	       $('#q3').append("<option value='0'>以上皆是</option>");
+	       }
+	       else if(this.value=='6')
+	       {
+	       $('.theme').html('團隊');
+	       $('.question').html('下列哪一個團隊是在有特別活動時才會組成的團隊？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='0'>招待安全團隊</option>");
+	       $('#q3').append("<option value='0'>夢夢國團隊</option>");
+	       $('#q3').append("<option value='0'>多媒體團隊</option>");
+	       $('#q3').append("<option value='1'>舞蹈團隊</option>");
+	       }
+	       else if(this.value=='7')
+	       {
+	       $('.theme').html('校園');
+	       $('.question').html('目前新世代教會還沒進入哪一間學校裡面？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='0'>左營國中</option>");
+	       $('#q3').append("<option value='0'>文藻外語大學</option>");
+	       $('#q3').append("<option value='0'>七賢國中</option>");
+	       $('#q3').append("<option value='1'>三民家商</option>");
+	       }
+	       else if(this.value=='8')
+	       {
+	       $('.theme').html('家庭');
+	       $('.question').html('開堂至今，教會總共辦了幾屆的5C營？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='0'>三屆</option>");
+	       $('#q3').append("<option value='0'>四屆</option>");
+	       $('#q3').append("<option value='1'>五屆</option>");
+	       $('#q3').append("<option value='0'>六屆</option>");
+	       }
+	       else if(this.value=='9')
+	       {
+	       $('.theme').html('青年');
+	       $('.question').html('澎湖三部曲當中，第一部曲的主題是下列哪一個？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='0'>this is you</option>");
+	       $('#q3').append("<option value='1'>this is me</option>");
+	       $('#q3').append("<option value='0'>this is him</option>");
+	       $('#q3').append("<option value='0'>this is it</option>");
+	       }
+	       else if(this.value=='10')
+	       {
+	       $('.theme').html('兒童');
+	       $('.question').html('武昌新世代教會的兒童教會叫做？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='0'>星星國</option>");
+	       $('#q3').append("<option value='0'>夢想國</option>");
+	       $('#q3').append("<option value='0'>希望國</option>");
+	       $('#q3').append("<option value='1'>夢夢國</option>");
+	       }
+	       else if(this.value=='11')
+	       {
+	       $('.theme').html('小組');
+	       $('.question').html('現今教會小組數量的總數是？');
+	       $("#q3").empty();
+	       $('#q3').append("<option value='0'>--請選擇--</option>");
+	       $('#q3').append("<option value='0'>8個</option>");
+	       $('#q3').append("<option value='0'>10個</option>");
+	       $('#q3').append("<option value='0'>12個</option>");
+	       $('#q3').append("<option value='1'>14個</option>");
+	       }
+	    });
+	    
+	    $('#q3').on('change',function () {
+	    	if(this.value == '1')
+	    	{
+	    	$('.answer').html('賓果賓果！答對拉！');
+	        $('.answer2').html('真的是太厲害！恭喜過關！');
+	    	}else {
+	    	$('.answer').html('QQ錯誤答案！');
+	        $('.answer2').html('沒關係，上帝總是給人第二次機會！<br>（請重新整理頁面，然後再來一次吧！）');
+	    	}
+	    });
+	    
+	    $('.help').popover();
+	    $('.submit').click(function () {
+	        event.preventDefault();
+	        var darken = '<div class="darken" style="display:none;"></div>';
+	        $('body').prepend(darken);
+	        $('.darken').delay().show(0).animate({ opacity: 0.8 }, 'fast');
+	        $('.thanks').removeClass('hide').addClass('fadeInDownBig');
+	    });
+	    var img_cnt = $('li.activate').index() + 1;
+	    var img_amt = $('li.form-group').length;
+	    $('.img_cnt').html(img_cnt);
+	    $('.img_amt').html(img_amt);
+	    var progress = $('.img_cnt').text() / $('.img_amt').text() * 100;
+	    $('.progress-bar').css('width', progress + '%');
+	    $('.form-control').keyup(function () {
+	        $('.nxt').removeClass('hide fadeOutDown').addClass('fadeInUp');
+	    });
+	    
+	    $('.nxt').click(function () {
+	        //$('.nxt').removeClass('fadeInUp').addClass('fadeOutDown');
+	        if ($('.progress-form li').hasClass('activate')) {
+	            $('p.alerted').removeClass('fadeInLeft').addClass('fadeOutUp');
+	            var $activate = $('li.activate');
+	            var $inactive = $('li.inactive');
+	            $activate.removeClass('fadeInRightBig activate').addClass('fadeOutLeftBig');
+	            $inactive.removeClass('hide inactive').addClass('activate fadeInRightBig').next().addClass('inactive');
+	            var img_cnt = $('li.activate').index() + 1;
+	            var img_amt = $('li.form-group').length;
+	            $('.img_cnt').html(img_cnt);
+	            $('.img_amt').html(img_amt);
+	            var progress = $('.img_cnt').text() / $('.img_amt').text() * 100;
+	            $('.progress-bar').css('width', progress + '%');
+	            if ($('.img_cnt').html() == $('.img_amt').html()) {
+	                $('.count').hide();
+	                $('.submit').removeClass('hide');
+	                $('.nxt').hide();
+	            }
+	        }
+	    });
+	});
+	$(function () {
+	    $('#q1').keyup(function () {
+	        var nameValue = $(this).val();
+	        $('.answer1').html(nameValue);
+	    });
+	    $('#q2').keyup(function () {
+	        var nameValue = $(this).val();
+	        $('.answer2').html(nameValue);
+	    });
+	    $('#q3').keyup(function () {
+	        var nameValue = $(this).val();
+	        $('.answer3').html(nameValue);
+	    });
+	    $('#q4').keyup(function () {
+	        var nameValue = $(this).val();
+	        $('.answer4').html(nameValue);
+	    });
+	    $('#q5').keyup(function () {
+	        var nameValue = $(this).val();
+	        $('.answer5').html(nameValue);
+	    });
+	});
+	</script>
+</body>
+</html>
