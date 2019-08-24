@@ -96,9 +96,9 @@
 	<script src='https://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
 	<script>
 	$(function () {
-	    $('input.getName').keyup('keyup', function () {
-	        $('.cName').html($('.getName').value);
-	    });
+// 	    $('input.getName').keyup('keyup', function () {
+// 	        $('.cName').html($('.getName').value);
+// 	    });
 	    
 	    $('#q2').on('change',function () {
 	       
@@ -255,6 +255,7 @@
 	    });
 	    
 	    $('.nxt').click(function () {
+		    $('.cName').html($('.getName').val());
 	        //$('.nxt').removeClass('fadeInUp').addClass('fadeOutDown');
 	        if ($('.progress-form li').hasClass('activate')) {
 	            $('p.alerted').removeClass('fadeInLeft').addClass('fadeOutUp');
