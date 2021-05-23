@@ -9,10 +9,12 @@
 	
 
 <script>
- function Mos(){
+  function Mos(){
         var to = parseInt($('#total').val());
         to +=1;
         $('#total').val(to);
+        $('#score').text(to);
+        
         if(to%5 == 0 ){ zlight(); }
     }
         
@@ -437,6 +439,8 @@ function  zlight(){
 		<img src="S__3170332.jpg"  class="S__3170332"  />	
 		<input value="0" id="total" style="display:none;"/>
 		<input value="0" id="zlight_to" style="display:none;"/>
+		<h3 id="score" for>0<h3>
+
 		<a onclick="Mos()" id="Mosquito1"  ><img src="01.png"  class="url_1"/></a>
 		<a onclick="Mos()" id="Mosquito2"  ><img src="01.png"  class="url_2"/></a>
 		<a onclick="Mos()" id="Mosquito3"  ><img src="01.png"  class="url_3"/></a>
