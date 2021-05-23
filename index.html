@@ -221,14 +221,8 @@ var myFunc01 = function() {
  };
 
 		$(document).ready(function(){
-		window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
-        		if (window.orientation === 180 || window.orientation === 0) {
-            			alert('為確保你的遊戲體驗，請將螢幕轉為橫向！');
-        		}
-        		if (window.orientation === 90 || window.orientation === -90 ){
-            			alert('為確保你的遊戲體驗，～～！');
-        		} 
-    		}, false);	
+		
+		    alert('為確保你的遊戲體驗，請將螢幕轉為橫向！');
 			
 		    var a =1;
 		    while(a<=12){
