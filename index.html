@@ -4,6 +4,7 @@
 	<title>我想回家-好眠</title> 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 	<script src="js/jquery-2.1.1.min.js"></script>
 	
 
@@ -40,6 +41,16 @@ function  zlight(){
 
     }
 }      
+	
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+        if (window.orientation === 180 || window.orientation === 0) {
+            alert('為確保你的遊戲體驗，請將螢幕轉為橫向！');
+        }
+        if (window.orientation === 90 || window.orientation === -90 ){
+            
+        } 
+    }, false);
+
 
 </script>
 	<style type="text/css">
