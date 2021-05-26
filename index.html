@@ -5,11 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-	<script src="js/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>	
 	
-
 <script>
-  function Mos(){
+ function Mos(){
         var to = parseInt($('#total').val());
         to +=1;
         $('#total').val(to);
@@ -28,9 +29,9 @@ function  zlight(){
         $('#zlight'+zlight).show();
         
     }else{
-        $('#zlight_to').val(0);
-	$('#total').val(0);
+		$('#total').val(0);
         $('#score').text(0);
+        $('#zlight_to').val(0);
         $('#zlight1').hide();
         $('#zdark1').show();
         $('#zlight2').hide();
@@ -41,18 +42,58 @@ function  zlight(){
         $('#zdark4').show();
         $('#zlight5').hide();
         $('#zdark5').show();
+        
+        $("#img1").hide(); 
+        $("#img2").show(); 
+        setTimeout(function() { $("#img2").hide(); }, 3000);
+        setTimeout(function() { $("#img1").show(); }, 4000);
+        
         myFunc01();
 
     }
 }      
-	
 
+window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+        if (window.orientation === 180 || window.orientation === 0) {
+            alert('為確保你的遊戲體驗，請將螢幕轉為橫向！');
+        }    }, false);
 
 
 </script>
-	
-<style type="text/css">
-#score{
+
+<script  language="javascript"  >
+
+var myFunc01 = function() {
+  var i = 1;
+  while (i<=250) {
+    (function(i) {
+            var a =  Math.floor(Math.random() * 12);
+            setTimeout(function() { $("#Mosquito"+a).show(); }, 1000 * i)
+            setTimeout(function() { $("#Mosquito"+a).hide(); }, 1000 * (i+1))
+        })(i++)
+    }
+};
+		$(document).ready(function(){
+		    
+		     alert('為確保你的遊戲體驗，請將螢幕轉為橫向！');
+		 
+		   var a =1;
+		    while(a<=12){
+		        (function(i) {$("#Mosquito"+a).hide();})(a++)
+		    }
+		   
+		    a =1;
+		    while(a<=5){
+		         (function(i) {$("#zlight"+a).hide();})(a++)
+		    }
+		    myFunc01();
+        });             
+</script>
+
+
+	<style type="text/css">
+	    
+    #score{
         position: absolute;
         width: 20px;
         height: 20px ;
@@ -61,13 +102,12 @@ function  zlight(){
     	color:white;
     	 font-family: Chalkduster, fantasy;
     }
-
 	
 	 @media screen and (min-width: 1280px) {
 	      .S__3170332  {
              width: 1280px;
             height: 718px ;
-		left:0px;
+             left:0px;
     		 top:0px;
          }    
          
@@ -196,7 +236,7 @@ function  zlight(){
 	      .S__3170332  {
              width: 900px ;
             height: 574px ;
-		       left:0px;
+             left:0px;
     		 top:0px;
          }    
          
@@ -320,7 +360,7 @@ function  zlight(){
          .S__3170332  {
              width: 580px ;
             height: 350px ;
-		  left:0px;
+            left:0px;
     		 top:0px;
          }    
  
@@ -411,63 +451,61 @@ function  zlight(){
     	.z_1{
     	    position: absolute;
     	    width: 57px;
-    	    top:250px;
+    	    top:235px;
     	    left:250px;
     	}
     	.z_2{
     	    position: absolute;
         	width: 57px;
-    	    top:220px;
+    	    top:200px;
     	    left:258px;
     	}
     	.z_3{
     	    position: absolute;
     	    width: 57px;
-    	    top:180px;
+    	    top:165px;
     	    left:243px;
     	}
     	.z_4{
     	    position: absolute;
     	    width: 57px;
-    	     top:150px;
+    	     top:130px;
     	    left:255px;
     	}
     	.z_5{
     	    position: absolute;
     	    width: 57px;
-    	    top:120px;
+    	    top:95px;
     	    left:240px;
     	}
 };
 
+    	
 </style>
-
 </head> 
-<body> 
-
-<div data-role="content" width="100%">	
+<body> 	
 
 		<div class="mo-img" > 
-		<img src="S__3170332.jpg"  class="S__3170332"  />	
+		<img src="S__3170332.jpg" id="img1"  class="S__3170332"  />
+		<img src="star.jpg" id="img2"  class="S__3170332"  />		
 		<input value="0" id="total" style="display:none;"/>
 		<input value="0" id="zlight_to" style="display:none;"/>
 		<h3 id="score" for>0<h3>
-
-		<a onclick="Mos()" id="Mosquito1"  ><img src="01.png"  class="url_1"/></a>
-		<a onclick="Mos()" id="Mosquito2"  ><img src="01.png"  class="url_2"/></a>
-		<a onclick="Mos()" id="Mosquito3"  ><img src="01.png"  class="url_3"/></a>
-		<a onclick="Mos()" id="Mosquito4"  ><img src="01.png"  class="url_4"/></a>
-		<a onclick="Mos()" id="Mosquito5"  ><img src="01.png"  class="url_5"/></a>
-		<a onclick="Mos()" id="Mosquito6"  ><img src="01.png"  class="url_6"/></a>
+		<a onclick="Mos()" id="Mosquito1" ><img src="01.png"  class="url_1"/></a>
+		<a onclick="Mos()" id="Mosquito2" ><img src="01.png"  class="url_2"/></a>
+		<a onclick="Mos()" id="Mosquito3" ><img src="01.png"  class="url_3"/></a>
+		<a onclick="Mos()" id="Mosquito4" ><img src="01.png"  class="url_4"/></a>
+		<a onclick="Mos()" id="Mosquito5" ><img src="01.png"  class="url_5"/></a>
+		<a onclick="Mos()" id="Mosquito6" ><img src="01.png"  class="url_6"/></a>
 		
-		<a onclick="Mos()" id="Mosquito7"   ><img src="01.png"  class="url_7"/></a>
-		<a onclick="Mos()" id="Mosquito8"   ><img src="01.png"  class="url_8"/></a>
+		<a onclick="Mos()" id="Mosquito7"  ><img src="01.png"  class="url_7"/></a>
+		<a onclick="Mos()" id="Mosquito8"  ><img src="01.png"  class="url_8"/></a>
 		<a onclick="Mos()" id="Mosquito9"  ><img src="01.png"  class="url_9"/></a>
 		<a onclick="Mos()" id="Mosquito10" ><img src="01.png"  class="url_10"/></a>
-		<a onclick="Mos()" id="Mosquito11"  ><img src="01.png"  class="url_11"/></a>
-		<a onclick="Mos()" id="Mosquito12"  ><img src="01.png"  class="url_12"/></a>
+		<a onclick="Mos()" id="Mosquito11" ><img src="01.png"  class="url_11"/></a>
+		<a onclick="Mos()" id="Mosquito12" ><img src="01.png"  class="url_12"/></a>
 		
-		<img src="02.png" id="zlight1"  class="z_1"/>
+		<img src="02.png" id="zlight1" class="z_1"/>
 		<img src="03.png" id="zdark1" class="z_1"/>
 		<img src="02.png" id="zlight2" class="z_2"/>
 		<img src="03.png" id="zdark2" class="z_2"/>
@@ -477,41 +515,10 @@ function  zlight(){
 		<img src="03.png" id="zdark4" class="z_4"/>
 		<img src="02.png" id="zlight5" class="z_5"/>
 		<img src="03.png" id="zdark5" class="z_5"/>
+		 <div>
+
 </div><!-- /content -->
 
-<script  language="javascript"  defer="defer" >
-
-var myFunc01 = function() {
-  var i = 1;
-  while (i<=250) {
-    (function(i) {
-            var a =  Math.floor(Math.random() * 12);
-            setTimeout(function() { $("#Mosquito"+a).show(); }, 1000 * i)
-            setTimeout(function() { $("#Mosquito"+a).hide(); }, 1000 * (i+1))
-        })(i++)
-    }
-    //alert("請按繼續！");
- };
-
-		$(document).ready(function(){
-		
-		    alert('為確保你的遊戲體驗，請將螢幕轉為橫向！');
-			
-		    var a =1;
-		    while(a<=12){
-		         (function(i) {$("#Mosquito"+a).hide();})(a++)
-		    }
-		    
-		    a =1;
-		     while(a<=5){
-		         (function(i) {$("#zlight"+a).hide();})(a++)
-		    }
-		    
-		    myFunc01();
-        });
-        
-                   
-	</script>
 
 
 </body>
