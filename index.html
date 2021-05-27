@@ -29,26 +29,28 @@ function  zlight(){
          $('#zlight'+zlight).show();
 
      }else{
-         $('#zlight_to').val(0);
+        $('#zlight_to').val(0);
  	$('#total').val(0);
-         $('#score').text(0);
-         $('#zlight1').hide();
-         $('#zdark1').show();
-         $('#zlight2').hide();
-        $('#zdark2').show();
-        $('#zlight3').hide();
-        $('#zdark3').show();
-        $('#zlight4').hide();
-         $('#zdark4').show();
-         $('#zlight5').hide();
-         $('#zdark5').show();
+        $('#score').text(0);
+        
+        
 	     
 	$("#img1").hide(); 
         $("#img2").show(); 
         setTimeout(function() { $("#img2").hide(); }, 3000);
         setTimeout(function() { $("#img1").show(); }, 3000);
+	     	$('#zlight1').hide();
+        	$('#zlight2').hide();
+        	$('#zlight3').hide();
+        	$('#zlight4').hide();
+       	 	$('#zlight5').hide();
+	     $('#zdark1').show();
+	     $('#zdark2').show();
+	     $('#zdark3').show();
+	     $('#zdark4').show();
+	     $('#zdark5').show();
 
-         myFunc01();
+        myFunc01();
 
      }
  }      
