@@ -10,11 +10,12 @@
 
  <script>
    function Mos(id){
-         var to = parseInt($('#total').val());
-         to +=1;
-         $('#total').val(to);
+	$('#'+id).hide();
+        
+	var to = parseInt($('#total').val());
+        to +=1;
+        $('#total').val(to);
         $('#score').text(to);
-        $('#'+id).hide();
         if(to%5 == 0 ){ zlight(); }
     }
         
