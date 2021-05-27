@@ -1,4 +1,8 @@
-<meta charset="utf-8">
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>我想回家-好眠</title> 
+ 	<meta charset="utf-8">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
  	<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
  	<script src="js/jquery-2.1.1.min.js"></script>
@@ -9,7 +13,18 @@
          var to = parseInt($('#total').val());
          to +=1;
          $('#total').val(to);
- @@ -28,9 +29,9 @@
+        $('#score').text(to);
+        
+        if(to%5 == 0 ){ zlight(); }
+    }
+        
+function  zlight(){
+    var zlight = parseInt($('#zlight_to').val());
+    zlight +=1 ;
+        
+    if(zlight<6){
+        $('#zlight_to').val(zlight);
+        $('#zdark'+zlight).hide();
          $('#zlight'+zlight).show();
 
      }else{
@@ -19,16 +34,19 @@
          $('#zlight1').hide();
          $('#zdark1').show();
          $('#zlight2').hide();
- @@ -41,18 +42,58 @@
+        $('#zdark2').show();
+        $('#zlight3').hide();
+        $('#zdark3').show();
+        $('#zlight4').hide();
          $('#zdark4').show();
          $('#zlight5').hide();
          $('#zdark5').show();
-	 
+	     
 	$("#img1").hide(); 
         $("#img2").show(); 
         setTimeout(function() { $("#img2").hide(); }, 3000);
         setTimeout(function() { $("#img1").show(); }, 4000);
-        
+
          myFunc01();
 
      }
@@ -44,7 +62,8 @@
          position: absolute;
          width: 20px;
          height: 20px ;
- @@ -61,13 +102,12 @@
+        left:15px;
+    	top:3px;
      	color:white;
      	 font-family: Chalkduster, fantasy;
      }
@@ -58,7 +77,120 @@
      		 top:0px;
           }    
 
- @@ -196,7 +236,7 @@
+            .url_1{
+    		  	position: absolute;
+    		  	width: 70px;    		  	
+    		  	left:100px;
+    		  	top:375px;
+    	}
+        .url_2{
+    		  	position: absolute;
+    		  	width: 70px;    		  	
+    		  	left:160px;
+    		  	top:510px;
+    	}	
+    	
+    	.url_3{
+    		  	position: absolute;
+    		  	width: 70px;    		  	
+    		  	left:220px;
+    		  	top:365px;
+    	}	
+		.url_4{
+    		  	position: absolute;
+    		  	width: 70px;    		  	
+    		  	left:320px;
+    		  	top:450px;
+    	}	
+    	
+    	.url_5{
+    		  	position: absolute;
+    		  	width: 70px;    		  	
+    		  	left:380px;
+    		  	top:365px;
+    	}	
+    	
+    	.url_6{
+    		  	position: absolute;
+    		  	width: 70px;    		  	
+    		  	left:430px;
+    		  	top:480px;
+    	}	
+    	
+    	   .url_7{
+    		  	position: absolute;
+    		  	width: 70px;    		  	
+    		  	left:715px;
+    		  	top:385px;
+    	}	
+    	
+    	.url_8{
+    		  	position: absolute;
+    		  	width: 70px;    		  	
+    		  	left:760px;
+    		  	top:480px;
+    	}	
+    	
+    	.url_9{
+    		  	position: absolute;
+    		  	width:  70px;    		  	    		  	
+    		  	left:830px;
+    		  	top:360px;
+    	}	
+		
+		.url_10{
+    		  	position: absolute;
+    		  	width:  70px;    		  	  	
+    		  	left:930px;
+    		  	top:450px;
+    	}	
+    	
+    	.url_11{
+    		  	position: absolute;
+    		  	width:  70px;    		  	  		  	
+    		  	left:1000px;
+    		  	top:340px;
+    	}	
+    	
+    	.url_12{
+    		  	position: absolute;
+    		  	width:  70px;    		  	    		  	
+    		  	left:1080px;
+    		  	top:505px;
+    	}	
+          .z_1{
+    	    position: absolute;
+    	    width: 130px;
+    	    top:480px;
+    	    left:550px;
+    	}
+    	.z_2{
+    	    position: absolute;
+        	width: 130px;
+    	    top:410px;
+    	    left:570px;
+    	}
+    	.z_3{
+    	    position: absolute;
+    	    width: 130px;
+    	    top:340px;
+    	    left:540px;
+    	}
+    	.z_4{
+    	    position: absolute;
+    	    width: 130px;
+    	    top:270px;
+    	    left:560px;
+    	}
+    	.z_5{
+    	    position: absolute;
+    	    width:  130px;    	    
+    	    top:200px;
+    	    left:535px;
+    	}
+	 }
+	
+	 @media screen and (min-width: 769px) and (max-width: 1280px)  {
  	      .S__3170332  {
               width: 900px ;
              height: 574px ;
@@ -66,7 +198,119 @@
      		 top:0px;
           }    
 
- @@ -320,7 +360,7 @@
+         .url_1{
+    		  	position: absolute;
+    		  	width: 50px;    		  	
+    		  	left:80px;
+    		  	top:275px;
+    	}
+        .url_2{
+    		  	position: absolute;
+    		  	width: 50px;    		  	
+    		  	left:110px;
+    		  	top:420px;
+    	}	
+    	
+    	.url_3{
+    		  	position: absolute;
+    		  	width: 50px;    		  	
+    		  	left:158px;
+    		  	top:350px;
+    	}	
+		.url_4{
+    		  	position: absolute;
+    		  	width: 50px;    		  	
+    		  	left:240px;
+    		  	top:330px;
+    	}	
+    	
+    	.url_5{
+    		  	position: absolute;
+    		  	width: 50px;    		  	
+    		  	left:290px;
+    		  	top:380px;
+    	}	
+    	
+    	.url_6{
+    		  	position: absolute;
+    		  	width: 50px;    		  	
+    		  	left:300px;
+    		  	top:290px;
+    	}	
+        .url_7{
+    		  	position: absolute;
+    		  	width: 50px;    		  	
+    		  	left:515px;
+    		  	top:385px;
+    	}	
+    	
+    	.url_8{
+    		  	position: absolute;
+    		  	width:  50px;    		  		  	
+    		  	left:525px;
+    		  	top:295px;
+    	}	
+    	
+    	.url_9{
+    		  	position: absolute;
+    		  	width:  50px;    		  	    		  	
+    		  	left:605px;
+    		  	top:350px;
+    	}	
+		
+		.url_10{
+    		  	position: absolute;
+    		  	width:  50px;    		  	  	
+    		  	left:635px;
+    		  	top:285px;
+    	}	
+    	
+    	.url_11{
+    		  	position: absolute;
+    		  	width:  50px;    		  	  		  	
+    		  	left:720px;
+    		  	top:330px;
+    	}	
+    	
+    	.url_12{
+    		  	position: absolute;
+    		  	width:  50px;    		  	    		  	
+    		  	left:740px;
+    		  	top:405px;
+    	}	
+        .z_1{
+    	    position: absolute;
+    	    width: 100px;
+    	    top:385px;
+    	    left:390px;
+    	}
+    	.z_2{
+    	    position: absolute;
+        	width: 100px;
+    	    top:330px;
+    	    left:410px;
+    	}
+    	.z_3{
+    	    position: absolute;
+    	    width: 100px;
+    	    top:275px;
+    	    left:380px;
+    	}
+    	.z_4{
+    	    position: absolute;
+    	    width: 100px;
+    	     top:220px;
+    	    left:400px;
+    	}
+    	.z_5{
+    	    position: absolute;
+    	    width:  100px;    	    
+    	    top:165px;
+    	    left:375px;
+    	}
+	 }
+	
+    @media screen and (max-width: 768px) {
           .S__3170332  {
               width: 580px ;
              height: 350px ;
@@ -74,7 +318,89 @@
      		 top:0px;
           }    
 
- @@ -411,63 +451,61 @@
+        .url_1{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:58px;
+    		  	top:174px;
+    	}
+    	
+    	.url_2{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:65px;
+    		  	top:253px;
+    	}	
+    	
+    	.url_3{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:118px;
+    		  	top:210px;
+    	}	
+		.url_4{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:160px;
+    		  	top:174px;
+    	}	
+    	
+    	.url_5{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:200px;
+    		  	top:195px;
+    	}	
+    	
+    	.url_6{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:170px;
+    		  	top:245px;
+    	}	
+    	
+		.url_7{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:320px;
+    		  	top:195px;
+    	}	
+    	
+    	.url_8{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:420px;
+    		  	top:205px;
+    	}	
+    	
+    	.url_9{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:485px;
+    		  	top:170px;
+    	}	
+		
+		.url_10{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:370px;
+    		  	top:175px;
+    	}	
+    	
+    	.url_11{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:370px;
+    		  	top:240px;
+    	}	
+    	
+    	.url_12{
+    		  	position: absolute;
+    		  	width: 30px;    		  	
+    		  	left:470px;
+    		  	top:255px;
+    	}	
+		    	
      	.z_1{
      	    position: absolute;
      	    width: 57px;
@@ -116,7 +442,7 @@
 
  		<div class="mo-img" > 
  		<img src="S__3170332.jpg" id="img1"  class="S__3170332"  />
-		<img src="star.jpg" id="img2"  class="S__3170332"  />			
+		<img src="star.jpg" id="img2"  class="S__3170332"  />		
  		<input value="0" id="total" style="display:none;"/>
  		<input value="0" id="zlight_to" style="display:none;"/>
  		<h3 id="score" for>0<h3>
@@ -139,7 +465,9 @@
  		<img src="03.png" id="zdark1" class="z_1"/>
  		<img src="02.png" id="zlight2" class="z_2"/>
  		<img src="03.png" id="zdark2" class="z_2"/>
- @@ -477,41 +515,10 @@ <h3 id="score" for>0<h3>
+		<img src="02.png" id="zlight3" class="z_3"/>
+		<img src="03.png" id="zdark3" class="z_3"/>
+		<img src="02.png" id="zlight4" class="z_4"/>
  		<img src="03.png" id="zdark4" class="z_4"/>
  		<img src="02.png" id="zlight5" class="z_5"/>
  		<img src="03.png" id="zdark5" class="z_5"/>
@@ -181,3 +509,4 @@
 
 
  </body>
+</html>
