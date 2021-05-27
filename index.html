@@ -9,12 +9,12 @@
 
 
  <script>
-   function Mos(){
+   function Mos(id){
          var to = parseInt($('#total').val());
          to +=1;
          $('#total').val(to);
         $('#score').text(to);
-        
+        $('#'+id).hide();
         if(to%5 == 0 ){ zlight(); }
     }
         
@@ -447,19 +447,19 @@ function  zlight(){
  		<input value="0" id="zlight_to" style="display:none;"/>
  		<h3 id="score" for>0<h3>
 
- 		<a onclick="Mos()" id="Mosquito1"  ><img src="01.png"  class="url_1"/></a>
- 		<a onclick="Mos()" id="Mosquito2"  ><img src="01.png"  class="url_2"/></a>
- 		<a onclick="Mos()" id="Mosquito3"  ><img src="01.png"  class="url_3"/></a>
- 		<a onclick="Mos()" id="Mosquito4"  ><img src="01.png"  class="url_4"/></a>
- 		<a onclick="Mos()" id="Mosquito5"  ><img src="01.png"  class="url_5"/></a>
- 		<a onclick="Mos()" id="Mosquito6"  ><img src="01.png"  class="url_6"/></a>
+ 		<a onclick="Mos('Mosquito1')" id="Mosquito1"  ><img src="01.png"  class="url_1"/></a>
+ 		<a onclick="Mos('Mosquito2')" id="Mosquito2"  ><img src="01.png"  class="url_2"/></a>
+ 		<a onclick="Mos('Mosquito3')" id="Mosquito3"  ><img src="01.png"  class="url_3"/></a>
+ 		<a onclick="Mos('Mosquito4')" id="Mosquito4"  ><img src="01.png"  class="url_4"/></a>
+ 		<a onclick="Mos('Mosquito5')" id="Mosquito5"  ><img src="01.png"  class="url_5"/></a>
+ 		<a onclick="Mos('Mosquito6')" id="Mosquito6"  ><img src="01.png"  class="url_6"/></a>
 
- 		<a onclick="Mos()" id="Mosquito7"   ><img src="01.png"  class="url_7"/></a>
- 		<a onclick="Mos()" id="Mosquito8"   ><img src="01.png"  class="url_8"/></a>
- 		<a onclick="Mos()" id="Mosquito9"  ><img src="01.png"  class="url_9"/></a>
- 		<a onclick="Mos()" id="Mosquito10" ><img src="01.png"  class="url_10"/></a>
- 		<a onclick="Mos()" id="Mosquito11"  ><img src="01.png"  class="url_11"/></a>
- 		<a onclick="Mos()" id="Mosquito12"  ><img src="01.png"  class="url_12"/></a>
+ 		<a onclick="Mos('Mosquito7')" id="Mosquito7"   ><img src="01.png"  class="url_7"/></a>
+ 		<a onclick="Mos('Mosquito8')" id="Mosquito8"   ><img src="01.png"  class="url_8"/></a>
+ 		<a onclick="Mos('Mosquito9')" id="Mosquito9"  ><img src="01.png"  class="url_9"/></a>
+ 		<a onclick="Mos('Mosquito10')" id="Mosquito10" ><img src="01.png"  class="url_10"/></a>
+ 		<a onclick="Mos('Mosquito11')" id="Mosquito11"  ><img src="01.png"  class="url_11"/></a>
+ 		<a onclick="Mos('Mosquito12')" id="Mosquito12"  ><img src="01.png"  class="url_12"/></a>
 
  		<img src="02.png" id="zlight1"  class="z_1"/>
  		<img src="03.png" id="zdark1" class="z_1"/>
